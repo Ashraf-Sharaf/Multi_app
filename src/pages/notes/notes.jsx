@@ -1,11 +1,10 @@
 import React from "react";
 import "./notes.css";
+import { useNavigate } from "react-router-dom";
 
 const Notes = () => {
-  return (
-    <div className="">
+  const navigate = useNavigate();
 
-    </div>
-  );
+  return <div className=""></div>;
 };
 export default Notes;

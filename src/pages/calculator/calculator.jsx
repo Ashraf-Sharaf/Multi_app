@@ -1,11 +1,10 @@
 import React from "react";
 import "./calculator.css";
+import { useNavigate } from "react-router-dom";
 
 const Calculator = () => {
-  return (
-    <div className="">
+  const navigate = useNavigate();
 
-    </div>
-  );
+  return <div className=""></div>;
 };
 export default Calculator;
