@@ -71,7 +71,7 @@ const Calculator = () => {
         <button
           className="button"
           onClick={() => {
-            navigate("../notes.jsx");
+            navigate("../notes");
           }}
         >
           Notes
