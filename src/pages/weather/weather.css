@@ -1,19 +1,22 @@
 * {
   height: 100vh;
 }
-.main{  background-image: url('/src/images/weather.jpg');
-    background-size: cover; }
+.main {
+  background-image: url("/src/images/weather.jpg");
+  background-size: cover;
+}
 
 .container {
   gap: 40px;
 }
 
 .card {
+  padding: 10px;
   border: 3px solid black;
   height: 500px;
   width: 400px;
   border-radius: 10px;
-  background-color: rgb(224, 222, 222) ;
+  background-color: rgb(224, 222, 222);
   opacity: 50%;
 }
 
@@ -21,7 +24,7 @@
   height: 40px;
   width: 100px;
   border-radius: 10px;
-  background-color: rgb(224, 222, 222) ;
+  background-color: rgb(224, 222, 222);
   opacity: 50%;
   font-size: larger;
   color: black;
@@ -32,3 +35,11 @@
   gap: 500px;
   width: 100%;
 }
+.current {
+
+  border: 3px solid black;
+  height: 100px;
+  width: 400px;
+  border-radius: 10px;
+}
+
