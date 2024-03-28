@@ -21,3 +21,14 @@ button {
 .body {
   padding: 100px;
 }
+.calculator-container{
+ 
+  padding-top: 100px;
+  height: 600px;
+}
+.displayResult{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgb(211, 206, 206);
+}

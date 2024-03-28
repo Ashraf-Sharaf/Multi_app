@@ -23,14 +23,13 @@ const Calculator = () => {
       setValue1("");
     } else {
       setValue1(value1 + value);
-      }
     }
-
+  };
 
   const calculateResult = () => {
     const firstValue = parseFloat(value1);
     const secondValue = parseFloat(value2);
-    
+
     let result = 0;
 
     switch (operator) {
@@ -46,21 +45,25 @@ const Calculator = () => {
       case "/":
         if (secondValue !== 0) {
           result = firstValue / secondValue;
-        } 
+        }
         break;
       default:
-          result = firstValue;
+        result = firstValue;
     }
     setValue1(result.toString());
-    setValue2('');
-    setOperator('');
-
+    setValue2("");
+    setOperator("");
   };
 
+  const handleKeyDown = (event) => {
+    const { key } = event;
+    const allowedKeys = /[0-9+\-*/.=]/;
 
-
-
-
+    if (allowedKeys.test(key)) {
+      event.preventDefault();
+      clickedValue(key);
+    }
+  };
 
   return (
     <div className="flex column center calculator">
@@ -83,24 +86,26 @@ const Calculator = () => {
           Weather
         </button>
       </div>
-      <input type="text" className="display" value={value1} readOnly />
-      <div className="flex gap">
-        <button onClick={() => clickedValue("+")}>+</button>
-        <button onClick={() => clickedValue("-")}>-</button>
-        <button onClick={() => clickedValue("*")}>*</button>
-        <button onClick={() => clickedValue("/")}>/</button>
-        <button onClick={() => clickedValue("0")}>0</button>
-        <button onClick={() => clickedValue("1")}>1</button>
-        <button onClick={() => clickedValue("2")}>2</button>
-        <button onClick={() => clickedValue("3")}>3</button>
-        <button onClick={() => clickedValue("4")}>4</button>
-        <button onClick={() => clickedValue("5")}>5</button>
-        <button onClick={() => clickedValue("6")}>6</button>
-        <button onClick={() => clickedValue("7")}>7</button>
-        <button onClick={() => clickedValue("8")}>8</button>
-        <button onClick={() => clickedValue("9")}>9</button>
-        <button onClick={() => clickedValue(".")}>.</button>
-        <button onClick={() => clickedValue("=")}>=</button>
+      <div className="calculator-container flex gap column center" onKeyDown={handleKeyDown}>
+        <input type="text" className="displayResult" value={value1} readOnly />
+        <div className="flex gap" onKeyDown={handleKeyDown}>
+          <button onClick={() => clickedValue("+")}>+</button>
+          <button onClick={() => clickedValue("-")}>-</button>
+          <button onClick={() => clickedValue("*")}>*</button>
+          <button onClick={() => clickedValue("/")}>/</button>
+          <button onClick={() => clickedValue("0")}>0</button>
+          <button onClick={() => clickedValue("1")}>1</button>
+          <button onClick={() => clickedValue("2")}>2</button>
+          <button onClick={() => clickedValue("3")}>3</button>
+          <button onClick={() => clickedValue("4")}>4</button>
+          <button onClick={() => clickedValue("5")}>5</button>
+          <button onClick={() => clickedValue("6")}>6</button>
+          <button onClick={() => clickedValue("7")}>7</button>
+          <button onClick={() => clickedValue("8")}>8</button>
+          <button onClick={() => clickedValue("9")}>9</button>
+          <button onClick={() => clickedValue(".")}>.</button>
+          <button onClick={() => clickedValue("=")}>=</button>
+        </div>
       </div>
     </div>
   );
