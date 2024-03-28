@@ -1,0 +1,14 @@
+* {
+    height: 100vh;
+  }
+  .calculator {
+    background-image: url("/src/images/math2.jpg");
+    background-size: cover;
+  }
+button {
+  width: 60px;
+  height: 60px;
+}
+.gap{  
+    gap:10px;
+}

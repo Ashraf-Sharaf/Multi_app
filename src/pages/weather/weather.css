@@ -20,26 +20,9 @@
   opacity: 50%;
 }
 
-.button {
-  height: 40px;
-  width: 100px;
-  border-radius: 10px;
-  background-color: rgb(224, 222, 222);
-  opacity: 50%;
-  font-size: larger;
-  color: black;
-}
-.buttons {
-  margin-top: 50px;
-  height: 70px;
-  gap: 500px;
-  width: 100%;
-}
 .current {
-
   border: 3px solid black;
   height: 100px;
   width: 400px;
   border-radius: 10px;
 }
-
