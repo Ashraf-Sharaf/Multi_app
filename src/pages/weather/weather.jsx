@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./weather.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import WeatherCard from "./card";
 
 const Weather = () => {
   const navigate = useNavigate();
@@ -26,9 +27,6 @@ const Weather = () => {
   useEffect(() => {
     loadweather();
   }, []);
-  // console.log(location['name']);
-  // console.log(current['humidity']);
-  // console.log(forecast[0]['date']);
 
   return (
     <div className="flex column center main">
@@ -73,11 +71,9 @@ const Weather = () => {
       </div>
 
       <div className="flex center container">
-        <div className="flex column card">
-          <div>        
-         
-          </div>
-        </div>
+        {forecast.map((weather) => {
+          return <WeatherCard weather={weather} key={weather.id} />;
+        })}
       </div>
     </div>
   );
