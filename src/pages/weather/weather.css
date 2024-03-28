@@ -25,4 +25,8 @@
   height: 100px;
   width: 400px;
   border-radius: 10px;
+  justify-content: space-between;
+}
+.details{
+  padding: 10px;
 }

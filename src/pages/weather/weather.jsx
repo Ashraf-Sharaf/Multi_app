@@ -53,29 +53,30 @@ const Weather = () => {
       </div>
       <div className="flex current ">
         <div className="flex details">
-    
-            {/* {location["name"]}
-            {location["country"]}
-            {location["localtime"]} */}
-      
+          <div>
+            {location["name"]}
+            <div>
+              {location["country"]}
+              <div>{location["localtime"]}</div>
+            </div>
+          </div>
         </div>
-        <div className="flex column">
-          <div> Temperature in celsius:</div> <div>{current['temp_c']} </div>
-          <div> Temperature in celsius:</div> <div>{current['temp_c']} </div>
-     
-          
-            {/* Wind Speed: {current['wind_kph']} 
-            Humidity: {current['humidity']}  */}
+        <div className="flex details">
+          <div>
+            Temperature in celsius:{current["temp_c"]}
+            <div>
+              Wind Speed: {current["wind_kph"]}
+              <div>Humidity: {current["humidity"]} </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="flex center container">
         <div className="flex column card">
-          {/* <div>
-            {location['country']} 
-            {location['name']}
-            {location['localtime']}
-          </div> */}
+          <div>        
+         
+          </div>
         </div>
       </div>
     </div>
