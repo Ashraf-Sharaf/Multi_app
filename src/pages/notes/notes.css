@@ -1,18 +1,30 @@
-.notes-container{
-    background-color: red;
-    
+* {
+  background-color: rgb(98, 161, 98);
 }
-.note{
-    height: 200px;
-    margin: 20px;
+.notes-container {
+  flex-wrap: wrap;
+  gap: 20px;
 }
-textarea{
-border-radius: 10px;
-height: 200px;
-padding: 10px;
+.note {
+  gap: 10px;
+  height: 200px;
+  margin: 20px;
 }
-.add-button{
-    margin-left: 20px;
-    width: 100px;
-    font-size: medium;
+textarea {
+  border-radius: 10px;
+  height: 200px;
+  padding: 10px;
+  background-color: rgb(208, 178, 178);
+}
+.add-button {
+  margin-left: 20px;
+  width: 100px;
+  font-size: medium;
+  background-color: rgb(224, 222, 222);
+  opacity: 50%;
+}
+.delete-button {
+  background-color: rgb(208, 178, 178);
+  font-size: small;
+  height: 50px;
 }
