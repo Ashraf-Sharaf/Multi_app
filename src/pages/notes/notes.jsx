@@ -1,11 +1,38 @@
-import React from "react";
+import React,{useState} from "react";
 import "./notes.css";
 import { useNavigate } from "react-router-dom";
-import noteCarc from "./noteCard";
-import NoteCard from "./noteCard";
+
 
 const Notes = () => {
   const navigate = useNavigate();
+  const [notes, setNotes] = useState([]);
+
+  const addNote = () => {
+    setNotes([...notes, '']);
+  };
+
+  const removeNote = (index) => {
+    setNotes(notes.filter((_, i) => i !== index));
+  };
+
+  const updateNote = (index, newText) => {
+    const newNotes = [...notes];
+    newNotes[index] = newText;
+    setNotes(newNotes);
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="">
@@ -28,7 +55,20 @@ const Notes = () => {
           Calculator
         </button>
       </div>
-      <NoteCard />
+      <button className="add-button" onClick={addNote}>Add Note</button>
+      <div className="notes-container flex ">
+        {notes.map((note, index) => (
+          <div className="note" key={index}>
+            <textarea
+              value={note}
+              onChange={(e) => updateNote(index, e.target.value)}
+              placeholder="Type something..."
+            />
+            <button class="notes-buttons" onClick={() => removeNote(index)}>Remove</button>
+          </div>
+        ))}
+      
+      </div>
     </div>
   );
 };
