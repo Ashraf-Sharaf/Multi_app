@@ -26,10 +26,10 @@ const Notes = () => {
         <button
           className="button"
           onClick={() => {
-            navigate("../notes");
+            navigate("../");
           }}
         >
-          Notes
+          Weather
         </button>
 
         <button
@@ -50,7 +50,7 @@ const Notes = () => {
             <textarea
               value={note}
               onChange={(e) => updateNote(index, e.target.value)}
-              placeholder="Type something..."
+              placeholder="Type syour note"
             />
             <button class="delete-button" onClick={() => removeNote(index)}>
               Remove
